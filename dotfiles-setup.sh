@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ORIGINAL_DIR=$(pwd)
-REPO_URL="https://github.com/typecraft-dev/dotfiles"
+REPO_URL="https://github.com/Reinn90/dotfiles"
 REPO_NAME="dotfiles"
 
 
@@ -26,9 +26,12 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow zsh
-  stow ghostty
-  stow nvim
+  stow backgrounds
+  stow hypr
+  stow kitty
+  stow starship
+  stow waybar
+  stow yazi
 else
   echo "Failed to clone the repository."
   exit 1
