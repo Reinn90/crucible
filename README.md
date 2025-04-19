@@ -30,7 +30,7 @@ An Arch Linux System Tool that automates the setup and configuration of an Arch 
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/typecraft-dev/crucible.git
+git clone [https://github.com/Reinn90/crucible.git]
 ```
 
 2. Run the setup script:
