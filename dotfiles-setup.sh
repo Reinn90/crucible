@@ -38,6 +38,7 @@ if [ $? -eq 0 ]; then
   stow starship
   stow waybar
   stow yazi
+  stow wofi
 else
   echo "Failed to clone the repository."
   exit 1
