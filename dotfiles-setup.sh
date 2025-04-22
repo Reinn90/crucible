@@ -23,11 +23,17 @@ else
   git clone "$REPO_URL"
 fi
 
+echo "Backing-up default hyprland config.."
+mv ~/.config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf.bak
+  
+
+echo "Starting gnu stow to install config files.."
+
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
   stow backgrounds
-  stow hypr
+  stow hypr 
   stow kitty
   stow starship
   stow waybar
@@ -37,3 +43,6 @@ else
   exit 1
 fi
 
+# Refresh hyprland configuration
+hyprctl reload
+echo "Config files install complete."
